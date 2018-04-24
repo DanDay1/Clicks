@@ -1,3 +1,9 @@
+// var moment = require('moment');
+// moment().format();
+
+// var day = moment.unix(1318781876);
+// console.log ("Day: " + day);
+
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
@@ -9,4 +15,10 @@ function clickCounter() {
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
+
+document.getElementById("result").innerHTML = "Last clicked " + moment().format("hh:mm A");
+
+console.log(moment().format("hh:mm A"));
+console.log(moment().startOf('minute').fromNow());  
+
 }
